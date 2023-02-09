@@ -287,16 +287,16 @@ const experienceData = [
     },
 ];
 
-const Experience = () => (
+const Experience = ({experience}) => (
     <View style={expStyles.container}>
         <Title>Experience</Title>
-        {experienceData.map(({ company, date, details, position }) => (
+        {experience.map((e) => (
             <ExperienceEntry
-                company={company}
-                date={date}
-                details={details}
-                key={company + position}
-                position={position}
+                company={e.company}
+                date={e.date}
+                details={e.details}
+                key={e.company + e.position}
+                position={e.position}
             />
         ))}
     </View>
@@ -377,13 +377,13 @@ const Resume = (props) => (
             <View style={resumeStyles.container}>
                 <View style={resumeStyles.leftColumn}>
                     <Image
-                        src="https://avatars.githubusercontent.com/u/32553624?v=4"
+                        src={URL.createObjectURL(props.ADD_NAME?.selectedImage)}
                         style={resumeStyles.image}
                     />
                     <Education school={props.ADD_NAME?.school}/>
                     <Skills skill={props.ADD_NAME?.skill}/>
                 </View>
-                <Experience />
+                <Experience experience={props.ADD_NAME?.experience}/>
             </View>
             <Text style={resumeStyles.footer}>
                 This IS the candidate you are looking for
