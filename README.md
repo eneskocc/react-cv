@@ -1,8 +1,10 @@
+![Ekran Resmi 2023-02-09 22 42 32 (2)](https://user-images.githubusercontent.com/32553624/218258185-1fdb8fae-2647-41cb-be1c-5e3b1044aaef.png)
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
+
 
 In the project directory, you can run:
 
