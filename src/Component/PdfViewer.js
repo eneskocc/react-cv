@@ -1,5 +1,5 @@
 
-import ReactPDF, {
+import {
     Text,
     Page,
     View,
@@ -117,7 +117,7 @@ const Resume = (props) => (
             <Header name={props.INFO?.name} subtitle={props.INFO?.subtitle} email={props.INFO?.email} />
             <View style={resumeStyles.container}>
                 <View style={resumeStyles.leftColumn}>
-                    {props.INFO?.selectedImage&&<Image
+                    {props.INFO?.selectedImage && <Image
                         src={URL.createObjectURL(props.INFO?.selectedImage)}
                         style={resumeStyles.image}
                     />}

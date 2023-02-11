@@ -1,7 +1,6 @@
-import { takeLatest, takeEvery, call, put, select } from "redux-saga/effects";
+import {  takeEvery,  put } from "redux-saga/effects";
 import * as $ from "../action";
 
-import axios from "axios";
 export function* handler() {
   yield takeEvery($.INFO, FUNC_INFO);
 

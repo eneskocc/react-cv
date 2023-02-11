@@ -3,7 +3,6 @@ import { Button, Form, Pagination, Badge } from 'react-bootstrap'
 import { connect } from "react-redux";
 import * as $ from "../redux/action";
 
-
 function PdfMarker(props) {
     const [name, setname] = useState("")
     const [subtitle, setsubtitle] = useState("")
@@ -29,7 +28,7 @@ function PdfMarker(props) {
 
     const updateSkill = (id, yetenek) => {
         const nextskill = skill.map(skill => {
-            if (skill.id !== id) {
+            if (skill.id != id) {
 
                 return skill;
             } else {
@@ -46,7 +45,7 @@ function PdfMarker(props) {
 
     const updateExperience = (id, company, position, date, info, i) => {
         const nextexperience = experience.map(experience => {
-            if (experience.id !== id) {
+            if (experience.id != id) {
 
                 return experience;
             } else {
@@ -65,7 +64,7 @@ function PdfMarker(props) {
 
     const updateExperienceDetail = (id, details, info) => {
         const nextExperienceDetail = details.map(item => {
-            if (item.id !== id) {
+            if (item.id != id) {
 
                 return item;
             } else {
@@ -149,7 +148,7 @@ function PdfMarker(props) {
                             </Form.Group>
                         </>
                         )}
-                    <Button variant="danger" className="mb-3" onClick={() => {
+                    <Button variant="danger" className="mb-3 mt-3" onClick={() => {
                         experience[0].details.push({ id: experience[0].details.length, info: "" });
                     }}>
                         Add Experience Detail
