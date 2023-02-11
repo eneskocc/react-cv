@@ -12,7 +12,6 @@ import ReactPDF, {
 } from "@react-pdf/renderer";
 import { educationStyles, expStyles, headerStyles, listStyles, resumeStyles, skilsStyles, titleStyles } from "./PdfViewerStyles";
 
-
 const Header = (props) => (
     <View style={headerStyles.container}>
         <View style={headerStyles.detailColumn}>
@@ -21,18 +20,14 @@ const Header = (props) => (
         </View>
         <View style={headerStyles.linkColumn}>
             <Text style={headerStyles.subtitle}>{props.phoneNumber}</Text>
-            <Link href="mailto:luke@theforce.com" style={headerStyles.link}>
-                <Text>{props.email}</Text>
-            </Link>
+            <Text style={headerStyles.subtitle}>{props.email}</Text>
         </View>
     </View >
 );
 
-
 const Title = ({ children }) => (
     <Text style={titleStyles.title}>{children}</Text>
 );
-
 
 
 const List = ({ children }) => children;
@@ -43,7 +38,6 @@ export const Item = ({ children }) => (
         <Text style={listStyles.itemContent}>{children}</Text>
     </View>
 );
-
 
 const SkillEntry = ({ name, skills }) => (
     <View>
@@ -66,8 +60,6 @@ const Skills = (props) => (
     </View>
 );
 
-
-
 const Education = (props) => (
     <View style={educationStyles.container}>
         <Title>Education</Title>
@@ -76,7 +68,6 @@ const Education = (props) => (
         <Text style={educationStyles.candidate}>{props.school?.lise}</Text>
     </View>
 );
-
 
 const ExperienceEntry = ({ company, details, position, date }) => {
     const title = `${company} | ${position}`;
@@ -93,7 +84,7 @@ const ExperienceEntry = ({ company, details, position, date }) => {
             <List>
                 {details.map((detail, i) => (
                     <Item key={i} style={expStyles.detailContainer}>
-                        {detail}
+                        {detail.info}
                     </Item>
                 ))}
             </List>
@@ -170,10 +161,10 @@ const Resume = (props) => (
             <Header name={props.INFO?.name} subtitle={props.INFO?.subtitle} email={props.INFO?.email} />
             <View style={resumeStyles.container}>
                 <View style={resumeStyles.leftColumn}>
-                    <Image
+                    {props.INFO?.selectedImage&&<Image
                         src={URL.createObjectURL(props.INFO?.selectedImage)}
                         style={resumeStyles.image}
-                    />
+                    />}
                     <Education school={props.INFO?.school} />
                     <Skills skill={props.INFO?.skill} />
                 </View>
