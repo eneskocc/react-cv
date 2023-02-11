@@ -1,5 +1,5 @@
 ![Ekran Resmi 2023-02-11 15 32 53 (2)](https://user-images.githubusercontent.com/32553624/218258231-8430cca7-16ce-4a0c-83a5-634566de29c5.png)
-![Ekran Resmi 2023-02-09 22 42 32 (2)](https://user-images.githubusercontent.com/32553624/218258185-1fdb8fae-2647-41cb-be1c-5e3b1044aaef.png)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
