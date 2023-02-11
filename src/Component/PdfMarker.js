@@ -8,6 +8,7 @@ function PdfMarker(props) {
     const [name, setname] = useState("")
     const [subtitle, setsubtitle] = useState("")
     const [email, setemail] = useState("")
+    const [phoneNumber, setphoneNumber] = useState("")
     const [school, setschool] = useState({})
     const [skill, setSkill] = useState([{ id: 0, yetenek: "" }])
     const [skillNumber, setSkillNumber] = useState([])
@@ -78,6 +79,10 @@ function PdfMarker(props) {
                     <Form.Group className="mb-3">
                         <Form.Label htmlFor="TextInput">Email</Form.Label>
                         <Form.Control id="email" placeholder="Email" value={email} onChange={(e) => setemail(e.target.value)} />
+                    </Form.Group>
+                    <Form.Group className="mb-3">
+                        <Form.Label htmlFor="TextInput">Phone Number</Form.Label>
+                        <Form.Control id="phoneNumber" placeholder="Phone Number" value={phoneNumber} onChange={(e) => setphoneNumber(e.target.value)} />
                     </Form.Group>
                 </>;
             case 2:
@@ -227,7 +232,7 @@ function PdfMarker(props) {
                     <Pagination size="lg">{items}</Pagination>
                     <br />
                 </div>
-                <Button variant="danger" onClick={() => props.addName(name, subtitle, email, school, skill, experience, selectedImage)}>Save All</Button>
+                <Button variant="danger" onClick={() => props.addName(name, subtitle, email,phoneNumber, school, skill, experience, selectedImage)}>Save All</Button>
             </fieldset>
         </Form>
 
