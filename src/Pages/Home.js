@@ -9,13 +9,13 @@ function Home(props) {
     
     useEffect(() => {
         console.log("home",props)
-    }, [props.ADD_NAME])
+    }, [props.INFO])
     
     return (
         <Container>
             <Row>
                 <Col xs={5}><PdfMarker /></Col>
-                {props.ADD_NAME_LOADER ? <Col xs={7}><PdfViewer ADD_NAME={props.ADD_NAME}/></Col>:<></>}
+                {props.INFO_LOADER ? <Col xs={7}><PdfViewer INFO={props.INFO}/></Col>:<></>}
                 
             </Row>
 
@@ -23,8 +23,8 @@ function Home(props) {
     )
 }
 const mapStateToProps = (state, props) => {
-    const { ADD_NAME_LOADER, ADD_NAME_STATUS, ADD_NAME } = state.app;
-    return { ADD_NAME_LOADER, ADD_NAME_STATUS, ADD_NAME };
+    const { INFO_LOADER, INFO_STATUS, INFO } = state.app;
+    return { INFO_LOADER, INFO_STATUS, INFO };
   };
   
   const mapDispatchToProps = (dispatch, props) => ({
@@ -34,7 +34,7 @@ const mapStateToProps = (state, props) => {
       email,
     ) => {
       dispatch({
-        type: $.ADD_NAME,
+        type: $.INFO,
         payload: {
             name,
             subtitle,

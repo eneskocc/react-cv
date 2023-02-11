@@ -235,8 +235,8 @@ function PdfMarker(props) {
 }
 
 const mapStateToProps = (state, props) => {
-    const { ADD_NAME_LOADER, ADD_NAME_STATUS, ADD_NAME } = state.app;
-    return { ADD_NAME_LOADER, ADD_NAME_STATUS, ADD_NAME };
+    const { INFO_LOADER, INFO_STATUS, INFO } = state.app;
+    return { INFO_LOADER, INFO_STATUS, INFO };
 };
 
 const mapDispatchToProps = (dispatch, props) => ({
@@ -250,7 +250,7 @@ const mapDispatchToProps = (dispatch, props) => ({
     ) => {
 
         dispatch({
-            type: $.ADD_NAME,
+            type: $.INFO,
             payload: {
                 name,
                 subtitle,

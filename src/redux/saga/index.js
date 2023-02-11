@@ -3,14 +3,14 @@ import * as $ from "../action";
 
 import axios from "axios";
 export function* handler() {
-  yield takeEvery($.ADD_NAME, FUNC_ADD_NAME);
+  yield takeEvery($.INFO, FUNC_INFO);
 
 }
 
-function* FUNC_ADD_NAME(action) {
+function* FUNC_INFO(action) {
 
     yield put({
-      type: $.ADD_NAME_REQUEST_SUCCESS,
+      type: $.INFO_REQUEST_SUCCESS,
       payload: action.payload,
     });
 

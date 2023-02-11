@@ -373,17 +373,17 @@ const Resume = (props) => (
         title="Resume"
     >
         <Page  {...props} style={resumeStyles.page}>
-            <Header name={props.ADD_NAME?.name} subtitle={props.ADD_NAME?.subtitle} email={props.ADD_NAME?.email} />
+            <Header name={props.INFO?.name} subtitle={props.INFO?.subtitle} email={props.INFO?.email} />
             <View style={resumeStyles.container}>
                 <View style={resumeStyles.leftColumn}>
                     <Image
-                        src={URL.createObjectURL(props.ADD_NAME?.selectedImage)}
+                        src={URL.createObjectURL(props.INFO?.selectedImage)}
                         style={resumeStyles.image}
                     />
-                    <Education school={props.ADD_NAME?.school}/>
-                    <Skills skill={props.ADD_NAME?.skill}/>
+                    <Education school={props.INFO?.school}/>
+                    <Skills skill={props.INFO?.skill}/>
                 </View>
-                <Experience experience={props.ADD_NAME?.experience}/>
+                <Experience experience={props.INFO?.experience}/>
             </View>
             <Text style={resumeStyles.footer}>
                 This IS the candidate you are looking for
@@ -408,7 +408,7 @@ export default (props) => (
                 height: "841.89",
                 aspectRatio: `595.28 / 841.89`,
             }}>
-            <Resume size="A4" ADD_NAME={props.ADD_NAME} />
+            <Resume size="A4" INFO={props.INFO} />
         </PDFViewer>
     </div>
 );
