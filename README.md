@@ -1,4 +1,5 @@
-![Ekran Resmi 2023-02-11 15 32 53 (2)](https://user-images.githubusercontent.com/32553624/218258231-8430cca7-16ce-4a0c-83a5-634566de29c5.png)
+![Ekran Resmi 2023-02-12 13 00 56 (2)](https://user-images.githubusercontent.com/32553624/218304546-ecd22433-078e-4646-aded-a5e6701580c0.png)
+
 
 # Getting Started with Create React App
 
