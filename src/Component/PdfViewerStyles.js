@@ -25,15 +25,15 @@ export const headerStyles = StyleSheet.create({
     },
     name: {
         fontSize: 24,
-        fontFamily: "Lato Bold",
+        fontFamily: "Roboto Bold",
     },
     subtitle: {
         fontSize: 10,
         justifySelf: "flex-end",
-        fontFamily: "Lato",
+        fontFamily: "Roboto",
     },
     link: {
-        fontFamily: "Lato",
+        fontFamily: "Roboto",
         fontSize: 10,
         color: "black",
         textDecoration: "none",
@@ -44,7 +44,7 @@ export const headerStyles = StyleSheet.create({
 
 export const titleStyles = StyleSheet.create({
     title: {
-        fontFamily: "Lato Bold",
+        fontFamily: "Roboto Bold",
         fontSize: 14,
         marginBottom: 10,
         textTransform: "uppercase",
@@ -63,18 +63,18 @@ export const listStyles = StyleSheet.create({
     itemContent: {
         flex: 1,
         fontSize: 10,
-        fontFamily: "Lato",
+        fontFamily: "Roboto",
     },
 });
 
 export const skilsStyles = StyleSheet.create({
     title: {
-        fontFamily: "Lato Bold",
+        fontFamily: "Roboto Bold",
         fontSize: 11,
         marginBottom: 10,
     },
     skills: {
-        fontFamily: "Lato",
+        fontFamily: "Roboto",
         fontSize: 10,
         marginBottom: 10,
     },
@@ -85,15 +85,15 @@ export const educationStyles = StyleSheet.create({
         marginBottom: 10,
     },
     school: {
-        fontFamily: "Lato Bold",
+        fontFamily: "Roboto Bold",
         fontSize: 10,
     },
     degree: {
-        fontFamily: "Lato",
+        fontFamily: "Roboto",
         fontSize: 10,
     },
     candidate: {
-        fontFamily: "Lato Italic",
+        fontFamily: "Roboto Italic",
         fontSize: 10,
     },
 });
@@ -114,7 +114,7 @@ export const expStyles = StyleSheet.create({
     },
     date: {
         fontSize: 11,
-        fontFamily: "Lato Italic",
+        fontFamily: "Roboto Italic",
     },
     detailContainer: {
         flexDirection: "row",
@@ -133,7 +133,7 @@ export const expStyles = StyleSheet.create({
     },
     details: {
         fontSize: 10,
-        fontFamily: "Lato",
+        fontFamily: "Roboto",
     },
     headerContainer: {
         flexDirection: "row",
@@ -153,7 +153,7 @@ export const expStyles = StyleSheet.create({
         fontSize: 11,
         color: "black",
         textDecoration: "none",
-        fontFamily: "Lato Bold",
+        fontFamily: "Roboto Bold",
     },
 });
 
@@ -187,7 +187,7 @@ export const resumeStyles = StyleSheet.create({
     },
     footer: {
         fontSize: 12,
-        fontFamily: "Lato Bold",
+        fontFamily: "Roboto Bold",
         textAlign: "center",
         marginTop: 15,
         paddingTop: 5,
@@ -201,18 +201,22 @@ export const resumeStyles = StyleSheet.create({
 });
 
 
-
 Font.register({
-    family: "Lato",
-    src: "https://fonts.gstatic.com/s/lato/v16/S6uyw4BMUTPHjx4wWw.ttf",
+    family: "Roboto",
+    src: "https://cdnjs.cloudflare.com/ajax/libs/ink/3.1.10/fonts/Roboto/roboto-light-webfont.ttf",
+    fontWeight: 200 
 });
 
 Font.register({
-    family: "Lato Italic",
-    src: "https://fonts.gstatic.com/s/lato/v16/S6u8w4BMUTPHjxsAXC-v.ttf",
+    family: "Roboto Italic",
+    src: "https://cdnjs.cloudflare.com/ajax/libs/ink/3.1.10/fonts/Roboto/roboto-medium-webfont.ttf",
+    fontWeight: 400 
 });
 
 Font.register({
-    family: "Lato Bold",
-    src: "https://fonts.gstatic.com/s/lato/v16/S6u9w4BMUTPHh6UVSwiPHA.ttf",
+    family: "Roboto Bold",
+    src: "https://cdnjs.cloudflare.com/ajax/libs/ink/3.1.10/fonts/Roboto/roboto-bold-webfont.ttf",
+    fontWeight: 600 
 });
+
+
