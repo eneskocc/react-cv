@@ -111,7 +111,7 @@ const Resume = (props) => (
         author="Luke Skywalker"
         keywords="awesome, resume, start wars"
         subject="The resume of Luke Skywalker"
-        title="Resume"
+        title="cvim"
     >
         <Page  {...props} style={resumeStyles.page}>
             <Header name={props.INFO?.name} subtitle={props.INFO?.subtitle} email={props.INFO?.email} />
@@ -125,6 +125,7 @@ const Resume = (props) => (
                     <Skills skill={props.INFO?.skill} />
                 </View>
                 <Experience experience={props.INFO?.experience} />
+
             </View>
             <Text style={resumeStyles.footer}>
                 This IS the candidate you are looking for
@@ -143,6 +144,7 @@ export default (props) => (
         }}
     >
         <PDFViewer
+
             className="loader"
             style={{
                 width: "595.28",
