@@ -26,6 +26,9 @@ export const headerStyles = StyleSheet.create({
     name: {
         fontSize: 24,
         fontFamily: "Roboto Bold",
+        fontWeight: 'bold',
+        color: '#1D76E2',
+
     },
     subtitle: {
         fontSize: 10,
@@ -45,6 +48,8 @@ export const headerStyles = StyleSheet.create({
 export const titleStyles = StyleSheet.create({
     title: {
         fontFamily: "Roboto Bold",
+        fontWeight: 'bold',
+        color: '#1D76E2',
         fontSize: 14,
         marginBottom: 10,
         textTransform: "uppercase",
@@ -70,6 +75,8 @@ export const listStyles = StyleSheet.create({
 export const skilsStyles = StyleSheet.create({
     title: {
         fontFamily: "Roboto Bold",
+        fontWeight: 'bold',
+        color: '#1D76E2',
         fontSize: 11,
         marginBottom: 10,
     },
@@ -86,6 +93,8 @@ export const educationStyles = StyleSheet.create({
     },
     school: {
         fontFamily: "Roboto Bold",
+        fontWeight: 'bold',
+        color: '#1D76E2',
         fontSize: 10,
     },
     degree: {
@@ -154,6 +163,7 @@ export const expStyles = StyleSheet.create({
         color: "black",
         textDecoration: "none",
         fontFamily: "Roboto Bold",
+        fontWeight: 'bold'
     },
 });
 
@@ -188,6 +198,8 @@ export const resumeStyles = StyleSheet.create({
     footer: {
         fontSize: 12,
         fontFamily: "Roboto Bold",
+        fontWeight: 'bold',
+        color: '#1D76E2',
         textAlign: "center",
         marginTop: 15,
         paddingTop: 5,
@@ -204,19 +216,19 @@ export const resumeStyles = StyleSheet.create({
 Font.register({
     family: "Roboto",
     src: "https://cdnjs.cloudflare.com/ajax/libs/ink/3.1.10/fonts/Roboto/roboto-light-webfont.ttf",
-    fontWeight: 200 
+    fontWeight: 200
 });
 
 Font.register({
     family: "Roboto Italic",
     src: "https://cdnjs.cloudflare.com/ajax/libs/ink/3.1.10/fonts/Roboto/roboto-medium-webfont.ttf",
-    fontWeight: 400 
+    fontWeight: 400
 });
 
 Font.register({
     family: "Roboto Bold",
     src: "https://cdnjs.cloudflare.com/ajax/libs/ink/3.1.10/fonts/Roboto/roboto-bold-webfont.ttf",
-    fontWeight: 600 
+    fontWeight: 600
 });
 
 
