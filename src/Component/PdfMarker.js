@@ -148,8 +148,10 @@ function PdfMarker(props) {
                             </Form.Group>
                         </>
                         )}
-                    <Button variant="danger" className="mb-3 mt-3" onClick={() => {
+                    <br />
+                    <Button variant="danger" onClick={() => {
                         experience[0].details.push({ id: experience[0].details.length, info: "" });
+                        updateExperience(0, "", "", "", "", experience[0].details.length)
                     }}>
                         Add Experience Detail
                     </Button>
@@ -187,11 +189,11 @@ function PdfMarker(props) {
                                 }} />
                             </Form.Group>
                             {
-                                experience[i + 1].details.length > 0 && experience[i + 1].details.map((item, i) => <>
+                                experience[i + 1].details.length > 0 && experience[i + 1].details.map((item, index) => <>
                                     <hr />
                                     <Form.Group className="mb-3 p-6">
-                                        <Form.Label htmlFor="TextInput">Detay {i + 1}</Form.Label>
-                                        <Form.Control id="detay" placeholder="Detay" value={item.info} onChange={(e) => updateExperience(i + 1, "", "", "", e.target.value, i)} />
+                                        <Form.Label htmlFor="TextInput">Detay {index + 1}</Form.Label>
+                                        <Form.Control id="detay" placeholder="Detay" value={item.info} onChange={(e) => updateExperience(i + 1, "", "", "", e.target.value, index)} />
                                     </Form.Group>
                                 </>
                                 )}
