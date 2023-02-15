@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import PdfMarker from '../Component/PdfMarker'
-import PdfViewer from '../Component/PdfViewer'
+import PdfViewer from '../Component/UI/PdfViewer'
 import { connect } from "react-redux";
 import * as $ from "../redux/action";
 
