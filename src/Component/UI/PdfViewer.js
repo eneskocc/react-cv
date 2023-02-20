@@ -142,6 +142,7 @@ const Resume = (props) => (
                borderBottomColor: "#112131",
                borderBottomStyle: "solid",
                alignItems: "stretch",
+             width: '100%',
             }}>
                 <Header name={props.INFO?.name} subtitle={props.INFO?.subtitle} email={props.INFO?.email} />
                 <View style={resumeStyles.container}>
