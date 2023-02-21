@@ -27,7 +27,7 @@ export const headerStyles = StyleSheet.create({
         fontSize: 24,
         fontFamily: "Roboto Bold",
         fontWeight: 'bold',
-        color: '#1D76E2',
+        color: '#FFE020',
 
     },
     subtitle: {
@@ -195,7 +195,7 @@ export const resumeStyles = StyleSheet.create({
     },
     leftColumn: {
         flexDirection: "column",
-        width: 200,
+        width: 250,
         alignItems:'center',
         height:'100%',
         paddingTop: 30,

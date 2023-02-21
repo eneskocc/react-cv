@@ -117,7 +117,9 @@ const ExperienceEntry = ({ company, details, position, date }) => {
 
 const Experience = ({ experience }) => (
     <View style={expStyles.container}>
-        <Title>Experience</Title>
+        <View style={{ backgroundColor: '#FFE020', flexDirection: 'column', alignItems: 'flex-start', width: '100%' }}>
+            <Title>Experience</Title>
+        </View>
         {experience.map((e) => (
             <ExperienceEntry
                 company={e.company}
