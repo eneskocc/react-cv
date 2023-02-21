@@ -184,7 +184,7 @@ export const resumeStyles = StyleSheet.create({
         flexDirection: "row",
     },
     container: {
-        
+        flex:1
        
     },
     image: {

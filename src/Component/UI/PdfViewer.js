@@ -92,9 +92,21 @@ const ExperienceEntry = ({ company, details, position, date }) => {
             </View>
             <List>
                 {details.map((detail, i) => (
-                    <Item key={i} style={expStyles.detailContainer}>
-                        {detail.info}
-                    </Item>
+                    <View style={listStyles.item}>
+                        <Text style={{
+                            fontFamily: "Roboto Bold",
+                            fontWeight: 'bold',
+                            color: 'black',
+                            fontSize: 10,
+                            paddingVertical: 2
+                        }}>-  </Text>
+                        <Text style={{
+                            fontFamily: "Roboto Bold",
+                            fontWeight: 'bold',
+                            fontSize: 10,
+                            paddingVertical: 2
+                        }}>{detail.info}</Text>
+                    </View>
                 ))}
             </List>
         </View>
@@ -136,21 +148,24 @@ const Resume = (props) => (
                 <Skills skill={props.INFO?.skill} />
             </View>
             <View style={{
-               flexDirection: "column",
-               padding:10,
-               borderBottomWidth: 2,
-               borderBottomColor: "#112131",
-               borderBottomStyle: "solid",
-               alignItems: "stretch",
-             width: '100%',
+                flexDirection: "column",
+                padding: 10,
+                borderBottomWidth: 2,
+                borderBottomColor: "#112131",
+                borderBottomStyle: "solid",
+                alignItems: "stretch",
+                width: '100%',
             }}>
                 <Header name={props.INFO?.name} subtitle={props.INFO?.subtitle} email={props.INFO?.email} />
+
                 <View style={resumeStyles.container}>
                     <Experience experience={props.INFO?.experience} />
-                    <Text style={resumeStyles.footer}>
-                        This IS the candidate you are looking for
-                    </Text>
+
                 </View>
+
+                <Text style={resumeStyles.footer}>
+                    This IS the candidate you are looking for
+                </Text>
             </View>
         </Page>
     </Document>
