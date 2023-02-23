@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
-import { Button, Form, Pagination, Badge } from 'react-bootstrap'
+import { Button, Pagination, Badge } from 'react-bootstrap'
 import { connect } from "react-redux";
 import * as $ from "../redux/action";
-
+import Form from 'react-bootstrap/Form';
+import InputGroup from 'react-bootstrap/InputGroup';
 function PdfMarker(props) {
     const [name, setname] = useState("")
     const [subtitle, setsubtitle] = useState("")
@@ -51,9 +52,9 @@ function PdfMarker(props) {
             } else {
                 return {
                     ...experience,
-                    company: company == "" ? experience.company : company,
-                    position: position == "" ? experience.position : position,
-                    date: date == "" ? experience.date : date,
+                    company: company == "" ? experience.company.length == 1 ? "" : experience.company : company,
+                    position: position == "" ? experience.position.length == 1 ? "" : experience.position : position,
+                    date: date == "" ? experience.date.length == 1 ? "" : experience.date : date,
                     details: updateExperienceDetail(i, experience.details, info)
                 };
             }
@@ -71,7 +72,7 @@ function PdfMarker(props) {
 
                 return {
                     ...item,
-                    info: info == "" ? item.info : info,
+                    info: info == "" ? item.info.length == 1 ? "" : item.info : info,
                 };
             }
         });
@@ -210,8 +211,8 @@ function PdfMarker(props) {
                         setExperienceNumber([...experienceNumber, { number: "e.target.value" }])
                         setExperience([...experience, { id: experienceNumber.length + 1, company: "", position: "", date: "", details: [{ id: 0, info: "" }] }]);
                     }}>
-                        Add Experience 
-                        
+                        Add Experience
+
                     </Button>
                 </>;
             case 4:
@@ -257,12 +258,17 @@ function PdfMarker(props) {
                                     <Button variant="danger" onClick={() => setSelectedImage(null)}>Remove</Button>
                                 </div>
                             )}
+                        <InputGroup className="mb-3">
+                            <Form.Control
+                                type="file"
+                                name="myImage"
+                                onChange={(event) => {
+                                    setSelectedImage(event.target.files[0]);
+                                }}
+                            />
+                        </InputGroup>
                         <input
-                            type="file"
-                            name="myImage"
-                            onChange={(event) => {
-                                setSelectedImage(event.target.files[0]);
-                            }}
+
                         />
                     </div>
                 </h1>;
