@@ -8,7 +8,9 @@ import PdfMarker from '../Component/PdfMarker';
 import bir from '../assets/1.png';
 import iki from '../assets/2.png';
 import uc from '../assets/3.png';
+import dort from '../assets/4.png';
 import PdfViewer2 from '../Component/UI2/PdfViewer2';
+import PdfViewer3 from '../Component/UI3/PdfViewer3';
 function Home(props) {
   const [template, setTemplate] = useState(0)
   useEffect(() => {
@@ -27,10 +29,13 @@ function Home(props) {
                   <PdfViewer INFO={props.INFO} />
                   :
                   template == 1 ?
-                  <PdfViewer1 INFO={props.INFO} />
-                  :
-                  <PdfViewer2 INFO={props.INFO} />
-                  
+                    <PdfViewer1 INFO={props.INFO} />
+                    :
+                    template == 2 ?
+                      <PdfViewer2 INFO={props.INFO} />
+                      :
+                      <PdfViewer3 INFO={props.INFO} />
+
               }
 
             </Col>
@@ -47,6 +52,9 @@ function Home(props) {
             </Button>
             <Button variant="secondary" onClick={() => setTemplate(2)}>
               <Image src={uc} rounded width="100" />
+            </Button>
+            <Button variant="secondary" onClick={() => setTemplate(3)}>
+              <Image src={dort} rounded width="100" />
             </Button>
           </ButtonGroup>
         </Col>
